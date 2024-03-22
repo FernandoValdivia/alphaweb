@@ -441,6 +441,31 @@ ul + ul {
     .grid__micro_2 img {
         width: 100% !important;
     }
+
+    /* Academia */
+    .container__academia {
+        flex-direction: column !important;
+    }
+
+    .grid__academia_1,
+    .grid__academia_2 {
+        width: 100% !important;
+    }
+
+    .container__etiqueta {
+        width: 90% !important;
+    }
+
+    .container__caracteristicas img {
+        padding: 10%;
+        width: 100% !important;
+    }
+
+    .container__caracteristicas {
+        flex-direction: column;
+    }
+
+    
 }
 
 /* Hero */
@@ -1121,4 +1146,82 @@ h1.display {
 
 .container__objetivos {
     padding-top: 70px;
+}
+
+.container__academia {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    min-height: 600px;
+}
+
+.container__academia img {
+    width: 100%;
+    min-height: 500px;
+    max-height: 500px;
+    object-fit: cover;
+}
+
+.grid__academia_1, 
+.grid__academia_2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.grid__academia_1 div, 
+.grid__academia_2 div {
+    padding: 1rem;
+    min-height: 100px;
+}
+
+.grid__academia_1 {
+    width: 33.33%;
+}
+
+.grid__academia_2 {
+    width: 66.66%;
+}
+
+.container__caracteristicas {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: url(caracteristicas.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 20%;
+    min-height: 600px;
+    width: 100%;
+    padding: 2%;
+}
+
+.container__caracteristicas img {
+    width: 25%;
+    height: max-content;
+}
+
+.container__etiqueta {
+    width: 600px;
+    height: min-content;
+    background-color: var(--white-color);
+    z-index: 1;
+    padding: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+
+    -webkit-box-shadow: -50px 51px 0px -22px var(--primary-color);
+    -moz-box-shadow: -50px 51px 0px -22px var(--primary-color);
+    box-shadow: -50px 51px 0px -22px var(--primary-color);
+}
+
+.container__etiqueta h1 {
+    font-weight: 500;
+}
+
+.etiqueta__azul {
+    position: absolute;
+    z-index: 0;
+    background: #1F497D;
+    height: 150px;
+    width: 300px;
 }
