@@ -6,6 +6,7 @@
     --primary-color: #1F497D;
     --white-color: #ffffff;
     --black-color: #000000;
+    --light-gray: #EBEBEB;
 
     --gradient-light: linear-gradient(90deg, rgb(211, 222, 233) 0%, rgb(151, 187, 224) 50%, rgb(159, 164, 168) 100%);
     --gradient--dark: linear-gradient(90deg, rgba(0,52,105,1) 0%, rgba(49,89,130,1) 50%, rgba(0,52,105,1) 100%);
@@ -359,6 +360,15 @@ ul + ul {
         width: 100% !important;
     }
 
+    .grid__capacidades_1 div, 
+    .grid__capacidades_2 div, 
+    .grid__capacidades_3 div, 
+    .grid__macro_1 div, 
+    .grid__macro_2 div, 
+    .grid__macro_3 div {
+        min-height: auto !important;
+    }
+
     .grid__capacidades_2 {
         flex-direction: column-reverse !important;
         width: 100% !important;
@@ -421,6 +431,15 @@ ul + ul {
     .subcontainer__estruc .estruc__down,
     .subcontainer__estruc div p {
         font-size: 1rem !important;
+    }
+
+    .container__instrumentos p {
+        font-size: 1.2rem !important;
+    }
+
+    .grid__micro_1 img,
+    .grid__micro_2 img {
+        width: 100% !important;
     }
 }
 
@@ -617,7 +636,7 @@ h1.display {
 }
 
 .slogan__slogan h3 {
-    background-color: #EBEBEB;
+    background-color: var(--light-gray);
     font-family: "Poppins", sans-serif;
     font-size: 1.6rem;
     font-weight: 300;
@@ -636,8 +655,7 @@ h1.display {
 .container__macro {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    background: #EBEBEB;
+    justify-content: center;
 }
 
 .grid__capacidades_1, 
@@ -646,6 +664,7 @@ h1.display {
 .grid__macro_1, 
 .grid__macro_2, 
 .grid__macro_3 {
+    background: var(--light-gray);
     display: flex;
     flex-direction: column;
     font-family: 'Poppins', sans-serif;
@@ -696,6 +715,7 @@ h1.display {
 
 .container__macro img {
     max-height: 400px !important;
+    min-height: 400px;
 }
 
 .container__contactos,
@@ -871,7 +891,7 @@ h1.display {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: url("/mapa.svg"),
+    background: /* url("/mapa.svg"), */
                 var(--white-color);
     background-repeat: space 100;
     background-size: contain;
@@ -976,7 +996,7 @@ h1.display {
     align-items: center;    
     padding: 2rem;
     font-family: 'Poppins', sans-serif;
-    background: #EBEBEB;
+    background: var(--light-gray);
 }
 
 .container__exp {
@@ -1010,6 +1030,7 @@ h1.display {
 .grid__micro_1 img,
 .grid__micro_2 img {
     min-width: 50% !important;
+    width: 50%;
     max-height: 500px !important;
     min-height: 100%;
 }
@@ -1037,8 +1058,8 @@ h1.display {
 .imagen__estruc {
     display: flex;
     align-items: flex-end;
-    background: url("consultoria.jpg"), 
-        linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 50%, rgb(255, 255, 255) 100%); /*  */
+    background: url("/estruc1.png");
+    box-shadow: 0px -250px 50px -30px rgba(255,255,255,0.8) inset;
     background-size: cover;
     background-repeat: no-repeat;
     width: 50%;
@@ -1089,22 +1110,15 @@ h1.display {
     background: var(--primary-color);
 }
 
-.container__inst {
-    height: 700px;
-}
-
-.grid_instr_1 img,
-.grid_instr_2 img,
-.grid_instr_3 img {
-    height: 50%;
-}
-
-.grid_instr_1 p,
-.grid_instr_2 p,
-.grid_instr_3 p {
+.container__instrumentos p {
+    color: var(--black-color);
     font-size: 1.8rem;
 }
 
 .grid_instr_2 {
     flex-direction: column-reverse;
+}
+
+.container__objetivos {
+    padding-top: 70px;
 }
