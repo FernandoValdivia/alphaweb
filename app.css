@@ -465,7 +465,24 @@ ul + ul {
         flex-direction: column;
     }
 
+    .container__economia {
+        flex-direction: column !important;
+        gap: 1rem !important;
+    }
     
+    .economia__left {
+        max-width: max-content !important;
+    }
+
+    .economia__right {
+        width: auto !important;
+        display: flex !important;
+        justify-content: center !important;
+    }
+
+    .container__condiciones {
+        flex-direction: column !important;
+    }
 }
 
 /* Hero */
@@ -496,6 +513,7 @@ main {
 }
 
 .hero-text {
+    z-index: 1;
     color: var(--white-color); 
 }
 
@@ -1224,4 +1242,73 @@ h1.display {
     background: #1F497D;
     height: 150px;
     width: 300px;
+}
+
+/* Observatorio */
+/* Economía Peruana */
+.container__economia {
+    display: flex;
+    flex-direction: row;
+    background: var(--white-color);
+    padding: 3rem;
+    justify-content: center;
+    align-items: center;
+    gap: 15rem;
+}
+
+.container__indicador {
+    display: flex;
+    flex-direction: column;
+    background: var(--white-color);
+    padding: 3rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.economia__left{
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+}
+
+.container__economia h1, 
+.container__indicador h1 {
+    font-family: 'Lora', sans-serif;
+    font-weight: 600;
+    font-size: 3rem;
+    padding-bottom: 2rem;
+}
+
+.container__economia p,
+.container__indicador p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 1.3rem;
+}
+
+.economia__right {
+    width: 800px;
+}
+
+.economia__right img {
+    width: 100%;
+}
+
+.condiciones__left, 
+.condiciones__right {
+    display: flex;
+    flex-direction: column;
+    max-width: 700px;
+}
+
+.condiciones__left img, 
+.condiciones__right img {
+    max-width: 100%;
+}
+
+.container__condiciones {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
 }
